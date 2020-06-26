@@ -1,6 +1,6 @@
 1st Vanilla JavaScript Project
 ================================
-##### Clock + Who are You? + To Do List + Weather API
+##### Clock + What is your Name? + To Do List + Weather API
 <hr/>
 
 ### 0. Main Page
@@ -23,3 +23,6 @@ If you allow the permission, browser print the current city and its current temp
 I bulid this using **OpenWeather's API.**
 
 [OpenWeather](https://openweathermap.org/)
+<hr/>
+
+### 2. Save User using Local Storage
