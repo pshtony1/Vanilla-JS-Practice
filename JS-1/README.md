@@ -1,4 +1,2 @@
-# WOW!
-## HOLLY!
-### SHIT!!
-#### KICK MY ASS!
+1st Vanilla JavaScript Project
+================================
