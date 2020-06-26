@@ -26,3 +26,15 @@ I bulid this using **OpenWeather's API.**
 <hr/>
 
 ### 2. Save User using Local Storage
+
+If you write your name in the Input box and press Enter, 
+
+![6](https://user-images.githubusercontent.com/67461578/85855725-b16e0400-b7f1-11ea-8c90-42cfb1d86b4f.png)
+
+your name saved into **local storage.**
+
+![8](https://user-images.githubusercontent.com/67461578/85855731-b29f3100-b7f1-11ea-9f39-06fbe719ae4a.png)
+
+And the browser takes out your name on the local storage and prints it on the web.
+
+![7](https://user-images.githubusercontent.com/67461578/85855728-b29f3100-b7f1-11ea-866e-3bdd917a5076.png)
