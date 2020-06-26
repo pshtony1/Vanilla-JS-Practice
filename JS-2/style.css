@@ -75,6 +75,23 @@
     border-radius: 30px;
 }
 
+.title {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 40px;
+    border-radius: 20px;
+    /* opacity: 0.6; */
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 @media screen and (max-width: 800px) {
     .color {
         flex: 100%;
