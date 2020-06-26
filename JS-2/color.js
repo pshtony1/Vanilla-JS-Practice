@@ -1,64 +1,145 @@
 // Vanilla JS
-// const bgColor = document.querySelectorAll(".color");
-// const button = document.querySelector("button");
+const bgColor = document.querySelectorAll(".color");
+const button = document.querySelector("button");
+const copied = document.querySelector(".copied");
 
-// function refresh() {
-//     history.go(0);
-// }
+let level = 0; // = opacity
+let inTimer = null;
+let fadefade = null;
+let outTimer = null;
 
-// function setRandColor() {
-//     let color = Math.floor(Math.random() * 256).toString(16);
+function fadeIn(element) {
+    element.style.display = "block";
 
-//     if (parseInt(color, 16) < 16) {
-//         color = "0" + color;
-//     }
+    // Initalize
+    clearInterval(inTimer);
+    clearTimeout(fadefade);
+    clearInterval(outTimer);
+    inTimer = null;
+    fadefade = null;
+    outTimer = null;
 
-//     return color.toUpperCase();
-// }
+    level = 0;
 
-// function applyColor(hexColor, element) {
-//     const colorText = element.children[0];
+    inTimer = setInterval(function () {
+        level = fadeInAction(element);
+    }, 1);
+}
 
-//     element.style.backgroundColor = hexColor;
-//     colorText.innerText = hexColor;
-// }
+function fadeInAction(element) {
+    level += 0.01;
+    if (level > 0.7) {
+        clearInterval(inTimer);
+        inTimer = null;
 
-// function createHex(element) {
-//     let hexColor = "#";
+        fadefade = setTimeout(fadeOut, 2000, element);
+        level = 0.7;
+    }
 
-//     for (let i = 0; i < 3; i++) {
-//         hexColor += setRandColor();
-//     }
+    changeOpacity(element);
 
-//     applyColor(hexColor, element);
-// }
+    return level;
+}
 
-// function init() {
-//     bgColor.forEach((colorString) => createHex(colorString));
-// }
+function fadeOut(element) {
+    fadefade = null;
+    outTimer = setInterval(function () {
+        level = fadeOutAction(element);
+    }, 1);
+}
 
-// init();
+function fadeOutAction(element) {
+    level -= 0.01;
+    if (level < 0) {
+        clearInterval(outTimer);
+        outTimer = null;
+        level = 0;
+    }
 
-// set random color when refresh.
-$(".refresh")
-    .click(function () {
-        $(".color").each(function () {
-            let color = ("#" + Math.random().toString(16).substr(2, 6)).toUpperCase();
-            $(this).css("background-color", color);
-            $(this).children(".color-hex").text(color);
-        });
-    })
-    .trigger("click");
+    changeOpacity(element);
 
-// copy hex color to clipboard.
-$(".color").click(function () {
-    let input = $("<input>");
-    let color = $(this).children(".color-hex").text();
+    return level;
+}
 
-    $("body").append(input);
-    input.val(color).select(); // select color text.
-    document.execCommand("copy"); // copy selected color text.
-    input.remove();
+function changeOpacity(element) {
+    element.style.opacity = level;
+}
 
-    $(".copied").fadeIn().delay(2000).fadeOut();
-});
+function handleCopy(e) {
+    const copyElement = e.path[0].children[0];
+    const tmp = document.createElement("input");
+
+    document.body.appendChild(tmp);
+    tmp.value = copyElement.innerText;
+    tmp.select();
+    document.execCommand("copy");
+    document.body.removeChild(tmp);
+
+    fadeIn(copied);
+}
+
+function handleRefresh() {
+    init();
+}
+
+function setRandColor() {
+    let color = Math.floor(Math.random() * 256).toString(16);
+
+    if (parseInt(color, 16) < 16) {
+        color = "0" + color;
+    }
+
+    return color.toUpperCase();
+}
+
+function applyColor(hexColor, element) {
+    const colorText = element.children[0];
+
+    element.style.backgroundColor = hexColor;
+    colorText.innerText = hexColor;
+}
+
+function createHex(element) {
+    let hexColor = "#";
+
+    for (let i = 0; i < 3; i++) {
+        hexColor += setRandColor();
+    }
+
+    applyColor(hexColor, element);
+}
+
+function init() {
+    bgColor.forEach((colorString) => createHex(colorString));
+}
+
+init();
+button.addEventListener("click", handleRefresh);
+for (let i = 0; i < bgColor.length; i++) {
+    bgColor[i].addEventListener("click", handleCopy);
+}
+
+// JQuery
+// // set random color when refresh.
+// $(".refresh")
+//     .click(function () {
+//         $(".color").each(function () {
+//             let color = ("#" + Math.random().toString(16).substr(2, 6)).toUpperCase();
+//             $(this).css("background-color", color);
+//             $(this).children(".color-hex").text(color);
+//         });
+//     })
+//     .trigger("click");
+
+// // copy hex color to clipboard.
+// $(".color").click(function () {
+//     let input = $("<input>");
+//     let color = $(this).children(".color-hex").text();
+
+//     $("body").append(input);
+//     input.val(color).select(); // select color text.
+//     document.execCommand("copy"); // copy selected color text.
+//     input.remove();
+
+//     $(".copied").fadeIn().delay(2000).fadeOut();
+// });
