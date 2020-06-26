@@ -51,4 +51,7 @@ You can delete element of To-Do List by clicking **X** button.
 This data also save into local storage.
 
 ![13](https://user-images.githubusercontent.com/67461578/85856728-766cd000-b7f3-11ea-9822-5d723f0d7141.png)
+<hr/>
+
+![14](https://user-images.githubusercontent.com/67461578/85857236-6e616000-b7f4-11ea-8b20-4c493dec25ff.png)
 
