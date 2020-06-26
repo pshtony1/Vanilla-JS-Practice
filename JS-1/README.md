@@ -13,3 +13,7 @@
 ### 1. Weather API
 
 When you first visit the site, the browser requests location permission.
+
+![4](https://user-images.githubusercontent.com/67461578/85854084-b67d8400-b7ee-11ea-8f4b-b3e85137de78.png)
+
+If you allow the permission, browser print the current city and its current temperature.
