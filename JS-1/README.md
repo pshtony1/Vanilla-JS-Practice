@@ -31,7 +31,7 @@ If you write your name in the Input box and press Enter,
 
 ![6](https://user-images.githubusercontent.com/67461578/85855725-b16e0400-b7f1-11ea-8c90-42cfb1d86b4f.png)
 
-your name saved into **local storage.**
+your name save into **local storage.**
 
 ![8](https://user-images.githubusercontent.com/67461578/85855731-b29f3100-b7f1-11ea-9f39-06fbe719ae4a.png)
 
@@ -47,4 +47,8 @@ And the browser takes out your name on the local storage and prints it on the we
 
 ![12](https://user-images.githubusercontent.com/67461578/85856370-dd3db980-b7f2-11ea-99e4-a134094d5cca.png)
 
-You can delete element of To-Do List by clicking **X** button
+You can delete element of To-Do List by clicking **X** button.   
+This data also save into local storage.
+
+![13](https://user-images.githubusercontent.com/67461578/85856728-766cd000-b7f3-11ea-9822-5d723f0d7141.png)
+
