@@ -41,3 +41,10 @@ And the browser takes out your name on the local storage and prints it on the we
 <hr/>
 
 ### 3. To-Do List
+
+
+![11](https://user-images.githubusercontent.com/67461578/85856366-dc0c8c80-b7f2-11ea-8ce4-e6c252857b4c.png)
+
+![12](https://user-images.githubusercontent.com/67461578/85856370-dd3db980-b7f2-11ea-99e4-a134094d5cca.png)
+
+You can delete element of To-Do List by clicking **X** button
