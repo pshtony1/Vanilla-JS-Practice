@@ -24,3 +24,4 @@ You can refresh webpage by clicking button in the upper-right.
 
 ### 3. Dynamic Layout
 
+![dynamic](https://user-images.githubusercontent.com/67461578/85917949-8fc85780-b899-11ea-892f-2b8ab6a8de42.gif)
