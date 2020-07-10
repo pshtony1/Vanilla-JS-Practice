@@ -143,3 +143,5 @@ for (let i = 0; i < bgColor.length; i++) {
 
 //     $(".copied").fadeIn().delay(2000).fadeOut();
 // });
+
+function sdsdsd() {}
