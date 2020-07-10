@@ -1,0 +1,19 @@
+{
+    "name": "cc",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "prettier": {
+        "printWidth": 160,
+        "useTabs": false,
+        "tabWidth": 4,
+        "bracketSpacing": true,
+        "semi": true,
+        "singleQuote": false
+    }
+}

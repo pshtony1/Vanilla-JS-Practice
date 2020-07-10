@@ -33,7 +33,7 @@ function clickLangs(e) {
     } else if (e.path[0].innerText == "日本語") {
         changeLangs("jpn");
     } else {
-        changeLangs("zh");
+        changOeLangs("zh");
     }
 }
 
