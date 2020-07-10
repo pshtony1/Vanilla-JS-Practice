@@ -43,7 +43,6 @@ function changeLangs(lang) {
     const ph = document.querySelectorAll(".placeholder");
     const chkBox = document.querySelector(".checkbox");
     const a = document.querySelectorAll("a");
-    console.log(chkBox.innerText);
     const head = '<input type="checkbox" /><div class="fas fa-check"></div>';
 
     if (lang == "eng") {
@@ -75,6 +74,8 @@ function changeLangs(lang) {
         a[0].innerText = "無法登入嗎？";
         a[1].innerText = "建立帳號";
     }
+
+    localStorage.setItem("lang", lang);
 }
 
 globe.addEventListener("click", showLangs);
@@ -83,3 +84,6 @@ langs[1].addEventListener("click", clickLangs);
 langs[2].addEventListener("click", clickLangs);
 langs[3].addEventListener("click", clickLangs);
 document.querySelector("html").addEventListener("click", closeSettings);
+
+if (localStorage.getItem("lang")) changeLangs(localStorage.getItem("lang"));
+
