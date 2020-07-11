@@ -57,23 +57,23 @@ Also, I used <b>*`SoftMax function`*</b> in output layer instead of <b>*`Relu fu
 | *Softmax function to prevent overflow* |
 
 ```
-softmax(mat) {
+function softmax(matrix) {
   let sum = 0;
-  let max = mat.max();
+  let max = matrix.max();
 
-  for (let i = 0; i < mat.cols; i++) {
-    for (let j = 0; j < mat.rows; j++) {
-      sum += Math.exp(mat.data[i][j] - max);
+  for (let i = 0; i < matrix.cols; i++) {
+    for (let j = 0; j < matrix.rows; j++) {
+      sum += Math.exp(matrix.data[i][j] - max);
     }
   }
 
-  for (let i = 0; i < mat.cols; i++) {
-    for (let j = 0; j < mat.rows; j++) {
-      mat.data[i][j] = Math.exp(mat.data[i][j] - max) / sum;
+  for (let i = 0; i < matrix.cols; i++) {
+    for (let j = 0; j < matrix.rows; j++) {
+      matrix.data[i][j] = Math.exp(matrix.data[i][j] - max) / sum;
     }
   }
 
-  return mat;
+  return matrix;
 }
 ```
 
@@ -107,3 +107,66 @@ function calculateFitness() {
 ```
 
 This calculated fitness is the probability of being selected as a parent.
+
+Then, <b>make a child</b> using parent's network.  
+And <b>mutate</b> all the parameters of child's network(`Weights`, `Biases`)
+
+```
+function getChild() {
+    let std = Math.random();
+    let sum = 0;
+    let parent = null;
+
+    for (let i = 0; i < deadBirds.length; i++) {
+        sum += deadBirds[i].fitness;
+        if (sum > std) {
+            parent = deadBirds[i];
+            break;
+        }
+    }
+
+    let child = new Bird(parent.brain);
+    child.brain.mutate(0.1);  // change parameter with 10% probability
+
+    return child;
+}
+```
+```
+mutate(prob) {
+  function mutate(data) {
+    if (Math.random() < prob) {
+    // + -0.1 ~ 0.1 random value of Gaussian
+    return data + randomGaussian(0, 0.1, true);
+    } else {
+    return data;
+  }
+}
+
+  // Apply the mutate function to all data
+  this.W1.map(mutate);
+  this.B1.map(mutate);
+  this.W2.map(mutate);
+  this.B2.map(mutate);
+}
+```
+
+#### + Gaussian Random Function
+Javascript does not support *`Gaussian Random Function`*.  
+So I made it the function using <b>`Central Limit Theorem`</b>.  
+
+<b>`Central Limit Theorem`</b>: https://en.wikipedia.org/wiki/Central_limit_theorem
+
+```
+function randomGaussian(avg = 0, dev = 1, loops = 3) {
+    let sum = 0;
+    for (let i = 0; i < loops; i++) {
+        sum += Math.random() * dev + avg;
+    }
+
+    return sum / loops;
+}
+```
+
+| ![1loop1](https://user-images.githubusercontent.com/67461578/87220978-8c59c380-c3a3-11ea-995e-51e865ea87f2.png) | ![1loop2](https://user-images.githubusercontent.com/67461578/87220988-a5fb0b00-c3a3-11ea-8f46-01079c693283.png) | ![1loop3](https://user-images.githubusercontent.com/67461578/87221002-b3b09080-c3a3-11ea-8683-f9422c51016f.png) | ![1loop4](https://user-images.githubusercontent.com/67461578/87221004-b4492700-c3a3-11ea-9be8-36e0b15c07f8.png) |
+| :--: | :--: | :--: | :--: |
+| *loops = 1* | *loops = 2* | *loops = 3* | *loops = 4* |
