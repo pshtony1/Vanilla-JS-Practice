@@ -224,4 +224,4 @@ function randomGaussian(avg = 0, dev = 1, reflect = false, loops = 3) {
 #### 3 - 3. Battle with saved Bird
 ![Honeycam 2020-07-11 23-00-44](https://user-images.githubusercontent.com/67461578/87225804-74e20100-c3ca-11ea-80bf-1ec24444054e.gif)
 
-
+Jump Key: `Up Arrow` (Default)
