@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flappy Bird!</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="lib/mat.js"></script>
+        <script src="lib/neuralNetwork.js"></script>
+    </head>
+    <body>
+        <canvas class="canvas" width="600" height="600"></canvas>
+        <br />
+        <div class="sliderDiv">
+            <input class="slider" type="range" value="1" min="1" max="100" />
+        </div>
+        <div class="rate"></div>
+        <div class="gen">
+            <b><p class="generation">Generation: 1</p></b>
+        </div>
+        <div class="score">
+            <b><p class="currentScore">cur</p></b>
+            <b><p class="bestScore">best</p></b>
+        </div>
+
+        <br />
+        <div class="save">
+            <b>Save: </b>
+            <button class="saveCur">save Current Bird</button>
+            <button class="saveBest_pre">save previous Best Bird</button>
+            <button class="saveBest_global">save global Best Bird</button>
+        </div>
+        <p class="saved">saved.</p>
+        <div class="load">
+            <b>load: </b>
+            <button class="load_train">[Train] load Bird</button>
+            <button class="load_play">[Play] load Bird</button>
+            <button class="back">Back to Train</button>
+            <button class="clear">Clear Data</button>
+        </div>
+        <br />
+        <div class="battle">
+            <b>Battle: </b>
+            <button class="battle_load">Battle save Bird</button>
+        </div>
+
+        <script src="save_load_battle/save.js"></script>
+        <script src="save_load_battle/load.js"></script>
+        <script src="save_load_battle/battle.js"></script>
+
+        <script src="Pipe.js"></script>
+        <script src="Bird.js"></script>
+        <script src="genetic.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
