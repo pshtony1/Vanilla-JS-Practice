@@ -1,6 +1,6 @@
 Clone Coding - Riot Games Login Page
 ================================
-### Vanilla Javascript Project
+### Vanilla Javascript Project.
 <hr/>
 
 ### 0. Original Page
