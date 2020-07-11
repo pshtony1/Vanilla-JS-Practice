@@ -11,7 +11,7 @@ function showLangs() {
     } else if (setting.style.display == "block") {
         setTimeout(none, 200);
         setting.style.animation = "close-settings 0.2s ease";
-    }
+    }......
 }
 
 function closeSettings(e) {
