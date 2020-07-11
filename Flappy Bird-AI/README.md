@@ -194,7 +194,7 @@ function randomGaussian(avg = 0, dev = 1, reflect = false, loops = 3) {
 ```
 <hr/>
 
-### 3. Training
+### 3. Training & Load & Battle
 #### 3 - 1. Training from Scratch
 ##### In first generation
 ![train1](https://user-images.githubusercontent.com/67461578/87221564-e8264b80-c3a7-11ea-8fa3-39f083eed179.gif)
@@ -204,5 +204,24 @@ function randomGaussian(avg = 0, dev = 1, reflect = false, loops = 3) {
 ![train2](https://user-images.githubusercontent.com/67461578/87221794-c4640500-c3a9-11ea-8310-c9e893548ed6.gif)
 
 #
+##### After 72 Generations
+![trainnn](https://user-images.githubusercontent.com/67461578/87225488-5e3aaa80-c3c8-11ea-8a72-4e9e6fd1256a.gif)
+
+#
 ##### Save Parameters of Current Model in Local Storage
 ![save](https://user-images.githubusercontent.com/67461578/87221894-8b786000-c3aa-11ea-88ce-44c7faf03220.gif)
+
+#
+#### 3 - 2. Load saved Parameters
+##### Load to Play saved Bird
+![playsave](https://user-images.githubusercontent.com/67461578/87225582-2da74080-c3c9-11ea-8a89-f6dedfab8041.gif)
+
+#
+##### Load to Train saved Bird
+![trainsave](https://user-images.githubusercontent.com/67461578/87225650-a0182080-c3c9-11ea-8952-71f6546269e7.gif)
+
+#
+#### 3 - 3. Battle with saved Bird
+![Honeycam 2020-07-11 23-00-44](https://user-images.githubusercontent.com/67461578/87225804-74e20100-c3ca-11ea-80bf-1ec24444054e.gif)
+
+
