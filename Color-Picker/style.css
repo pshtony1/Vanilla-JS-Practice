@@ -1,0 +1,99 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "NanumSquare", sans-serif;
+}
+
+.colors-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color {
+    position: relative;
+    flex: 25%;
+    min-height: 220px;
+    background-color: red;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.color:hover {
+    filter: brightness(80%);
+}
+
+.color-hex {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.refresh {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.4s linear;
+}
+
+.refresh:hover {
+    transform: rotate(180deg);
+}
+
+.copied {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    color: white;
+    background-color: black;
+    padding: 15px 40px;
+    min-width: 340px;
+    text-align: center;
+    display: none;
+    font-size: 17px;
+
+    border: none;
+    border-radius: 30px;
+}
+
+.title {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 40px;
+    border-radius: 20px;
+    /* opacity: 0.6; */
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 800px) {
+    .color {
+        flex: 100%;
+    }
+}
