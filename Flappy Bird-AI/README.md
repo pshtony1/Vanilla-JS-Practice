@@ -48,9 +48,9 @@ inputData.data[0][3] = closetPipe.top / canvas.height;
 inputData.data[0][4] = closetPipe.bottom / canvas.height;
 ```
 
-I used <b>`Relu function`</b> into activation function.
+I used <b>*`Relu function`*</b> into activation function.
 
-Also, I used <b>`SoftMax function`</b> in output layer instead of <b>`Relu function`</b>.
+Also, I used <b>*`SoftMax function`*</b> in output layer instead of <b>*`Relu function`*</b>.
 
 | ![image](https://user-images.githubusercontent.com/67461578/87220108-3b929c80-c39c-11ea-8bfb-e85db3c73707.png) |
 | :--: |
@@ -88,7 +88,22 @@ if (result.data[0][0] > result.data[0][1]) {
 
 #
 #### 2 - 2. Next Generation
-If Brids all dead, calculate fitness using its score.
-Fitness is average of 
+If Brids all dead, calculate fitness using its score.  
 
-<b> Calculate Fitness Algorithm </b>
+<b>*Score*</b> is <b>how many frames</b> that each bird is alive.  
+<b>*Fitness*</b> is the <b>ratio of each score</b> about average of all Birds' score.
+
+```
+function calculateFitness() {
+    let sum = 0;
+    for (let bird of deadBirds) {
+        sum += bird.score;
+    }
+
+    for (let bird of deadBirds) {
+        bird.fitness = bird.score / sum;
+    }
+}
+```
+
+This calculated fitness is the probability of being selected as a parent.
