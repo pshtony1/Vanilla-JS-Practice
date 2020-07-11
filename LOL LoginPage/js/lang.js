@@ -33,7 +33,7 @@ function clickLangs(e) {
     } else if (e.path[0].innerText == "日本語") {
         changeLangs("jpn");
     } else {
-        changOeLangs("zh");
+        changeLangs("zh");
     }
 }
 
@@ -86,4 +86,3 @@ langs[3].addEventListener("click", clickLangs);
 document.querySelector("html").addEventListener("click", closeSettings);
 
 if (localStorage.getItem("lang")) changeLangs(localStorage.getItem("lang"));
-
