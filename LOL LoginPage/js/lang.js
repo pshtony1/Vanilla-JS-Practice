@@ -5,7 +5,7 @@ const body = document.querySelector("body");
 setting.style.display = "none";
 
 function showLangs() {
-    if (setting.style.display == "none") {.
+    if (setting.style.display == "none") {
         setting.style.display = "block";
         setting.style.animation = "open-settings 0.2s ease";
     } else if (setting.style.display == "block") {
