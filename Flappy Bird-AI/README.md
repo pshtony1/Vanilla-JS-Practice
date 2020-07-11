@@ -21,11 +21,13 @@ You can save trained model, and load saved model.
 
 Also, you can play saved model and battle with it.
 
+This model saved into `local storage`. So the data is saved even if you turn off the browser.
+
 <hr/>
 
 ### 2. AI Architecture
 #
-#### 2 - 1. Network
+#### 2 - 1. Neural Network Model
 ![image](https://user-images.githubusercontent.com/67461578/87219532-fb7ceb00-c396-11ea-9254-eeeed89a7e59.png)
 
 I designed my AI model has 3 layers.  
@@ -170,3 +172,37 @@ function randomGaussian(avg = 0, dev = 1, loops = 3) {
 | ![1loop1](https://user-images.githubusercontent.com/67461578/87220978-8c59c380-c3a3-11ea-995e-51e865ea87f2.png) | ![1loop2](https://user-images.githubusercontent.com/67461578/87220988-a5fb0b00-c3a3-11ea-8f46-01079c693283.png) | ![1loop3](https://user-images.githubusercontent.com/67461578/87221002-b3b09080-c3a3-11ea-8683-f9422c51016f.png) | ![1loop4](https://user-images.githubusercontent.com/67461578/87221004-b4492700-c3a3-11ea-9be8-36e0b15c07f8.png) |
 | :--: | :--: | :--: | :--: |
 | *loops = 1* | *loops = 2* | *loops = 3* | *loops = 4* |
+
+And I made some changes based on this code to have negative range.
+
+```
+function randomGaussian(avg = 0, dev = 1, reflect = false, loops = 3) {
+    let sum = 0;
+
+    if (!reflect) {
+        for (let i = 0; i < loops; i++) {
+            sum += Math.random() * dev + avg;
+        }
+    } else {
+        for (let i = 0; i < loops; i++) {
+            sum += Math.random() * dev * 2 + (avg - dev);
+        }
+    }
+
+    return sum / loops;
+}
+```
+<hr/>
+
+### 3. Training
+#### 3 - 1. Training from Scratch
+##### In first generation
+![train1](https://user-images.githubusercontent.com/67461578/87221564-e8264b80-c3a7-11ea-8fa3-39f083eed179.gif)
+
+#
+##### After 60 Generations
+![train2](https://user-images.githubusercontent.com/67461578/87221794-c4640500-c3a9-11ea-8310-c9e893548ed6.gif)
+
+#
+##### Save Parameters of Current Model in Local Storage
+![save](https://user-images.githubusercontent.com/67461578/87221894-8b786000-c3aa-11ea-88ce-44c7faf03220.gif)
