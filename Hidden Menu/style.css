@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.sign {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.menu-btn-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: purple;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn-container.active {
+  transform: translateX(-200px);
+  border-radius: 0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.menu-btn-container.active .menu-btn {
+  font-size: 23px;
+}
+
+.menu-btn {
+  color: white;
+  font-size: 20px;
+}
+
+.menu-container {
+  position: fixed;
+  right: 0;
+  transform: translateX(100%);
+  background-color: purple;
+  width: 200px;
+  height: 100vh;
+  padding-left: 20px;
+  padding-top: 30px;
+  transition: 0.2s ease-out;
+}
+
+.menu-container.active {
+  transform: translateX(0);
+}
+
+.menu-head {
+  display: block;
+  font-weight: 700;
+  font-size: 25px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.menu {
+  color: white;
+  display: block;
+  margin-bottom: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.menu:hover {
+  transform: scale(1.1);
+}
+
+.menu > i {
+  margin-right: 10px;
+}
