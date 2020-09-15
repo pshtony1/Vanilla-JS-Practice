@@ -29,14 +29,9 @@ function changeDice() {
 function rollManager() {
   // 0. Exceptions
   if (count != 0) return;
+  if (rollBtn.classList.contains("active")) return;
 
-  if (rollBtn.classList.contains("no-active")) {
-    rollBtn.className = "fas fa-dice-six roll-dice active";
-  } 
-  
-//   else {
-//     rollBtn.className = "fas fa-dice-six roll-dice no-active";
-//   }
+  rollBtn.className = "fas fa-dice-six roll-dice active";
 
   // 0.5. Initalize
   randoms = [];
