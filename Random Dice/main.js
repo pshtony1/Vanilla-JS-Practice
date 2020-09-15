@@ -80,7 +80,7 @@ function rollManager() {
   }
 
   // 3. Animation & change
-  setTimeout(changeDice, 200);
+  setTimeout(changeDice, 300);
 }
 
 function init() {
