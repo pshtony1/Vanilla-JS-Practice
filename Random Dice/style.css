@@ -47,11 +47,20 @@ html {
   display: block;
   color: rgb(51, 51, 51);
   font-size: 100px;
-  transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.dice-text.no-changing {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: visiblity 0s, opacity 0.3s ease-in,
+    transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .dice-text.changing {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.4);
 }
 
 .dice-background {
@@ -65,11 +74,17 @@ html {
   border-radius: 14px;
   box-shadow: 8px 8px 7px rgb(90, 71, 35);
   z-index: -1;
-  transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: visiblity 0s, opacity 0.3s ease-in,
+    transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .dice-background.changing {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.4);
 }
 
 .btn-container {
