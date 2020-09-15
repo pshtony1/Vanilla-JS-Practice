@@ -32,9 +32,11 @@ function rollManager() {
 
   if (rollBtn.classList.contains("no-active")) {
     rollBtn.className = "fas fa-dice-six roll-dice active";
-  } else {
-    rollBtn.className = "fas fa-dice-six roll-dice no-active";
-  }
+  } 
+  
+//   else {
+//     rollBtn.className = "fas fa-dice-six roll-dice no-active";
+//   }
 
   // 0.5. Initalize
   randoms = [];
