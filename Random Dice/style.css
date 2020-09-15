@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  background-color: burlywood;
+}
+
+.fa-dice {
+  position: fixed;
+  top: 50%;
+  left: calc(50% - 330px);
+  color: rgb(194, 156, 107);
+  font-size: 60px;
+  transform: translate(-50%, -50%);
+}
+
+.dice-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 100px;
+  background-color: rgb(126, 99, 48);
+  padding: 10px;
+  border: 5px rgb(177, 138, 67) solid;
+  border-radius: 10px;
+  box-shadow: 8px 8px 10px rgb(94, 73, 36) inset, 8px 8px 10px rgb(143, 114, 77);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dice {
+  position: relative;
+  cursor: pointer;
+}
+
+.dice:hover {
+  transform: scale(1.1) translateY(-20px);
+}
+
+.dice-text.no-changing,
+.dice-text.changing {
+  display: block;
+  color: rgb(51, 51, 51);
+  font-size: 100px;
+  transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.dice-text.changing {
+  display: none;
+}
+
+.dice-background {
+  display: block;
+  position: absolute;
+  top: 6.25px;
+  left: 1px;
+  width: 85px;
+  height: 85px;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 8px 8px 7px rgb(90, 71, 35);
+  z-index: -1;
+  transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.dice-background.changing {
+  display: none;
+}
+
+.btn-container {
+  position: fixed;
+  top: calc(50% - 120px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 10px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+.btn-container:hover,
+.btn-container.active {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.btn-container.active {
+  cursor: default;
+}
+
+.roll-dice.no-active,
+.roll-dice.active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  color: white;
+  font-size: 50px;
+}
+
+.roll-dice.no-active {
+  transition: transform 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.btn-container:hover .roll-dice.no-active {
+  transform: translate(-50%, -50%) rotateZ(315deg) scale(1.3);
+}
+
+.roll-dice.active {
+  color: rgb(204, 169, 124);
+  transform: translate(-50%, -50%) rotateZ(315deg) scale(1.3);
+}
