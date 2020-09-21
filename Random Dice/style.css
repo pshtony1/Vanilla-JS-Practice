@@ -8,27 +8,40 @@ html {
   background-color: burlywood;
 }
 
-.fa-dice {
+.roll-left-container {
   position: fixed;
-  top: 50%;
+  top: calc(85% + 15px);
   left: calc(50% - 330px);
-  color: rgb(194, 156, 107);
-  font-size: 60px;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.dice-container {
+.roll-left-container > .fa-dice {
+  color: rgba(255, 255, 255, 0.521);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.left-count {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.dice-hand {
   position: fixed;
-  top: 50%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
   height: 100px;
   background-color: rgb(126, 99, 48);
-  padding: 10px;
   border: 5px rgb(177, 138, 67) solid;
-  border-radius: 10px;
   box-shadow: 8px 8px 10px rgb(94, 73, 36) inset, 8px 8px 10px rgb(143, 114, 77);
+  padding: 10px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -36,6 +49,9 @@ html {
 .dice {
   position: relative;
   cursor: pointer;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
 }
 
 .dice:hover {
@@ -47,27 +63,29 @@ html {
   display: block;
   color: rgb(51, 51, 51);
   font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .dice-text.no-changing {
   visibility: visible;
   opacity: 1;
-  transform: scale(1);
-  transition: visiblity 0s, opacity 0.3s ease-in,
-    transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transform: translate(-50%, -50%) scale(1);
+  transition: visiblity 0s, opacity 0.3s ease-in, transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .dice-text.changing {
   visibility: hidden;
   opacity: 0;
-  transform: scale(1.4);
+  transform: translate(-50%, -50%) scale(1.4);
 }
 
 .dice-background {
   display: block;
   position: absolute;
   top: 6.25px;
-  left: 1px;
+  left: 7px;
   width: 85px;
   height: 85px;
   background-color: white;
@@ -77,8 +95,11 @@ html {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
-  transition: visiblity 0s, opacity 0.3s ease-in,
-    transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: visiblity 0s, opacity 0.3s ease-in, transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.dice.onSlot .dice-background {
+  box-shadow: none;
 }
 
 .dice-background.changing {
@@ -89,8 +110,8 @@ html {
 
 .btn-container {
   position: fixed;
-  top: calc(50% - 120px);
-  left: 50%;
+  top: 85%;
+  left: calc(50% + 350px);
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
@@ -130,4 +151,35 @@ html {
 .roll-dice.active {
   color: rgb(204, 169, 124);
   transform: translate(-50%, -50%) rotateZ(315deg) scale(1.3);
+}
+
+.dice-selected {
+  position: fixed;
+  top: calc(85% - 150px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 540px;
+  height: 100px;
+  background-color: rgb(80, 80, 80);
+  /* background-color: rgb(34, 34, 34); */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 8px 8px 10px rgb(126, 106, 79);
+}
+
+.slot {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(66, 66, 66);
+  /* background-color: tomato; */
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgb(17, 17, 17) inset;
+  /* box-shadow: 5px 5px 20px black inset; */
+  text-align: center;
+  line-height: 125px;
+  z-index: -2;
 }
