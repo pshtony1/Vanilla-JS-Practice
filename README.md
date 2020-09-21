@@ -1,4 +1,4 @@
-# Vanila Javascript Projects
+# Vanilla Javascript Projects
 #### also HTML and CSS
 
 

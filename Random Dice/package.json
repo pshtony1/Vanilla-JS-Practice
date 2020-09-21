@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "prettier": {
-    "printWidth": 80,
+    "printWidth": 160,
     "useTabs": false,
     "tabWidth": 2,
     "bracketSpacing": true,

@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <i class="fas fa-dice"></i>
-    <div class="dice-container">
+    <div class="roll-left-container">
+      <i class="fas fa-dice"></i>
+      <span class="left-count">3 left</span>
+    </div>
+    <div class="dice-hand">
       <div class="dice">
         <i class="fas fa-dice-three dice-text no-changing"></i>
         <div class="dice-background"></div>
@@ -37,6 +40,17 @@
     <div class="btn-container">
       <i class="fas fa-dice-six roll-dice no-active"></i>
     </div>
-    <script src="main.js"></script>
+
+    <div class="dice-selected">
+      <div class="slot empty">
+        <!-- <i class="fas fa-dice"></i> -->
+      </div>
+      <div class="slot empty"></div>
+      <div class="slot empty"></div>
+      <div class="slot empty"></div>
+      <div class="slot empty"></div>
+    </div>
+    <script src="js/player.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
