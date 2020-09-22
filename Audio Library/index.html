@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background -->
+    <div class="main-container">
+      <img src="images/background.jpg" class="background" />
+      <span class="header">audio library</span>
+    </div>
+
+    <!-- Detectors -->
+    <div class="bottom-detector"></div>
+    <div class="right-detector"></div>
+
+    <!-- Details -->
+    <div class="detail-container">
+      <div class="author">
+        <span class="author-name">Declan DP</span>
+        <img src="images/logo.jpg" alt="" class="author-logo" />
+      </div>
+      <div class="song-detail">
+        <span class="song-name">Far Away</span>
+        <span class="song-genre">Dance & Electronic + Bright</span>
+      </div>
+      <div class="available">
+        <span class="available-header">AVAILABLE ON</span>
+        <div class="available-icons">
+          <i class="fab fa-google-play"></i>
+          <i class="fab fa-deezer"></i>
+          <i class="fab fa-apple"></i>
+          <i class="fab fa-spotify"></i>
+          <i class="fab fa-soundcloud"></i>
+        </div>
+      </div>
+      <div class="download">
+        <span class="download-header">DOWNLOAD</span>
+        <a href="https://www.audiolibrary.com.co/" class="download-link"
+          >www.audiolibrary.com.co</a
+        >
+      </div>
+    </div>
+
+    <!-- Player -->
+    <div class="player-container">
+      <div class="player">
+        <div class="progress-container">
+          <span class="current-time">1:30</span>
+          <div class="progress-bar">
+            <div class="empty-bar"></div>
+            <div class="fill-bar"></div>
+            <div class="progress-button">
+              <div class="inner-button"></div>
+            </div>
+          </div>
+          <span class="end-time">3:00</span>
+        </div>
+        <div class="button-container">
+          <div class="previous-button">
+            <div class="inner-circle">
+              <i class="fas fa-backward"></i>
+            </div>
+          </div>
+          <div class="music-controll-button paused">
+            <div class="inner-circle">
+              <i class="fas fa-pause"></i>
+            </div>
+          </div>
+          <div class="next-button">
+            <div class="inner-circle">
+              <i class="fas fa-forward"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
