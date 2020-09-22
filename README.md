@@ -19,3 +19,6 @@ https://pshtony1.github.io/Vanilla-Javascript/Toast%20Notification
 
 ## 6. Hidden Menu
 https://pshtony1.github.io/Vanilla-Javascript/Hidden%20Menu
+
+## 7. Audio Library Clone Coding
+https://pshtony1.github.io/Vanilla-Javascript/Audio%20Library
