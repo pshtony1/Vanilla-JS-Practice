@@ -26,4 +26,4 @@ https://pshtony1.github.io/Vanilla-Javascript/Hidden%20Menu
 https://pshtony1.github.io/Vanilla-Javascript/Audio%20Library
 
 ## 8. Close Window (Bounce Effect)
-https://pshtony1.github.io/Vanilla-Javascript/Close%20Window
+https://pshtony1.github.io/Vanilla-Javascript/Close%20Window/
