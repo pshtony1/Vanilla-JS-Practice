@@ -24,3 +24,6 @@ https://pshtony1.github.io/Vanilla-Javascript/Hidden%20Menu
 [> Original <](https://www.youtube.com/watch?v=iTSpmnHMVS4)
 
 https://pshtony1.github.io/Vanilla-Javascript/Audio%20Library
+
+## 6. Hidden Menu
+https://pshtony1.github.io/Vanilla-Javascript/Bounce%20Window
