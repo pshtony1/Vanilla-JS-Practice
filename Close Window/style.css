@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.window {
+  width: 100vw;
+  height: 100vh;
+  background-color: tomato;
+  transform: translateY(-100%);
+  position: relative;
+  z-index: 10;
+}
+
+.window.active {
+  animation: closeWindow 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-20deg);
+  font-size: 100px;
+  color: white;
+  border: 7px solid white;
+  padding: 20px 30px;
+  border-radius: 30px;
+}
+
+.btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 80px;
+  background-color: tomato;
+  border-radius: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+@keyframes closeWindow {
+  12%,
+  34%,
+  56%,
+  78%,
+  100% {
+    transform: translateY(0);
+  }
+
+  28% {
+    transform: translateY(-80px);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+
+  72% {
+    transform: translateY(-16px);
+  }
+
+  94% {
+    transform: translateY(-3px);
+  }
+}
