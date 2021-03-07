@@ -3,16 +3,10 @@ Flappy Bird AI with NeuroEvolution
 ### Vanilla Javascript Project
 <hr/>
 
-### 0. Reference
-Coding Train's NeuroEvolution Lecture
-
-https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Yd3975YwxrR0x40XGJ_KGO
-<hr/>
-
 ### 1. Introduction
-![gen2](https://user-images.githubusercontent.com/67461578/87219150-e5216000-c393-11ea-92f0-04122f8795b2.gif)
+[Project Link](https://pshtony1.github.io/Vanilla-Javascript/Flappy%20Bird-AI)
 
-[Project Link (https://pshtony1.github.io/Vanilla-Javascript/Flappy%20Bird-AI)](https://pshtony1.github.io/Vanilla-Javascript/Flappy%20Bird-AI)
+![gen2](https://user-images.githubusercontent.com/67461578/87219150-e5216000-c393-11ea-92f0-04122f8795b2.gif)
 
 This is my first AI project using <b>Vanilla Javascript.</b>
 
