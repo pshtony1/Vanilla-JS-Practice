@@ -4,12 +4,14 @@ Clone Coding - Riot Games Login Page
 <hr/>
 
 ### 0. Original Page
-Riot Games Login Page https://auth.riotgames.com/login
+[Riot Games Login Page](https://auth.riotgames.com/login)
 
 ![log](https://user-images.githubusercontent.com/67461578/87217752-af767a00-c387-11ea-8596-743f9af69e6d.gif)
 <hr/>
 
 ### 1. Main Page
+
+[Project Link](https://pshtony1.github.io/Vanilla-Javascript/RiotGames-LoginPage)
 
 ![log2](https://user-images.githubusercontent.com/67461578/87217797-21e75a00-c388-11ea-8847-951dd97c4175.gif)
 <hr/>
